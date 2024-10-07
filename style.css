@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+html {
+  font-size: 62, 5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* HEADER*/
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 2rem 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+  font-family: "Roboto";
+  font-size: 3rem;
+  color: #e84393;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+header .logo::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: #e84393;
+  bottom: -10px;
+  left: 0;
+  transition: transform 0.3s ease-in-out;
+  transform-origin: right;
+  transform: scaleX(0);
+}
+
+.logo:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+header .navbar a {
+  font-size: 2rem;
+  padding: 0 1.5rem;
+  color: #604e5a;
+}
