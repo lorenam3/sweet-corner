@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Sweet Corner</title>
+    <link rel="stylesheet" href="swiper-bundle.min.css" />
 
-    <link rel="stylesheet" href="style.css"
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
@@ -20,10 +21,52 @@
       </nav>
     </header>
 
-    <section></section>
+    <section class="main swiper mySwiper">
+      <div class="slider-wrapper swiper-wrapper">
+        <div class="slider-item swiper-slide">
+          <img
+            src="images/background-cake.webp"
+            alt="background cake"
+            class="image"
+          />
+          <div class="image-text">
+            <h2>Welcome to Sweet Corner</h2>
+            <h3>Where sweet dreams become reality!</h3>
+          </div>
+        </div>
+
+        <div class="slider-item swiper-slide">
+          <img
+            src="images/white-chocolate-cheesecake.webp"
+            alt="background white cheesecake"
+            class="image"
+          />
+          <div class="image-text">
+            <h2>Welcome to Sweet Corner</h2>
+          </div>
+        </div>
+        <div class="slider-item swiper-slide">
+          <img src="images/dessert.webp" alt="dessert" class="image" />
+          <div class="image-text">
+            <h2>
+              Don't hesitate - <br />
+              Contact us for your special order!
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-button-next nav-btn"></div>
+      <div class="swiper-button-prev nav-btn"></div>
+      <div class="swiper-pagination"></div>
+    </section>
 
     <section class="about"></section>
 
     <footer></footer>
   </body>
+
+  <script src="swiper-bundle.min.js"></script>
+
+  <script src="script.js"></script>
 </html>
