@@ -8,14 +8,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Roboto", sans-serif;
   border: none;
   text-decoration: none;
   transition: 0.2s linear;
 }
 
 html {
-  font-size: 62, 5%;
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
   overflow-x: hidden;
@@ -43,7 +42,7 @@ header {
 
 header .logo {
   font-family: "Roboto";
-  font-size: 3rem;
+  font-size: 2rem;
   color: #e84393;
   font-weight: bold;
   text-transform: uppercase;
@@ -71,7 +70,7 @@ header .logo::after {
 }
 
 header .navbar a {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   padding: 0 1.5rem;
@@ -165,4 +164,52 @@ header .navbar a:hover {
 .swiper-pagination-bullet-active {
   border: 2px solid #fff;
   background-color: var(--pink);
+}
+
+/* ABOUT US SECTION*/
+
+.about-us .row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: nowrap;
+  padding: 2rem 0;
+}
+
+.about-us .row .video-container {
+  flex: 1;
+  max-width: 50%;
+}
+
+.video-container video {
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  height: auto;
+}
+
+.video-container:hover video {
+  transform: scale(1.05);
+}
+
+.about-us .row .about-text {
+  flex: 1;
+  max-width: 50%;
+}
+
+.about-text h3 {
+  font-size: 2.8rem;
+  color: #333;
+}
+
+.about-text h3:hover {
+  color: var(--pink);
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  color: #777;
+  padding: 1rem 0;
+  line-height: 1.6;
+  text-align: justify;
 }
