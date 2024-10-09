@@ -11,6 +11,8 @@
   </head>
   <body>
     <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
       <a href="#" class="logo">sweet corner</a>
 
       <nav class="navbar">
@@ -19,6 +21,23 @@
         <a href="">Products</a>
         <a href="">Contact</a>
       </nav>
+
+      <div class="icon-cart">
+        <svg
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4 4a1 1 0 0 1 1-1h1.5a1 1 0 0 1 .979.796L7.939 6H19a1 1 0 0 1 .979 1.204l-1.25 6a1 1 0 0 1-.979.796H9.605l.208 1H17a3 3 0 1 1-2.83 2h-2.34a3 3 0 1 1-4.009-1.76L5.686 5H5a1 1 0 0 1-1-1Z"
+            clip-rule="evenodd"
+          />
+        </svg>
+        <span>0</span>
     </header>
 
     <section class="main swiper mySwiper">
@@ -110,6 +129,33 @@
         </div>
       </div>
     </section>
+
+
+        <section class="daily-specials-list">
+            <h1>Today's Sweet Special</h1>
+        
+              <div class="products-container">
+              
+              <div class="products" id="products">
+              
+              </div>
+        
+        </section>
+
+        <div class="cartTab">
+            <h1>Shopping Cart</h1>
+            <div class="listCart">
+      
+              
+            </div>
+            
+      
+            <div class="btn">
+              <button class="close">CLOSE</button>
+              <button class="checkOut">CHECK Out</button>
+            </div>
+          </div>
+    
 
     <footer></footer>
   </body>

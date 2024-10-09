@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Strawberry Cake",
+    "price": 2.7,
+    "image": "images/strawberry-piece-of-cake.webp"
+  },
+
+  {
+    "id": 2,
+    "name": "White Chocolate Cheesecake",
+    "price": 2.5,
+    "image": "images/white-chocolate-cheesecake.webp"
+  },
+  {
+    "id": 3,
+    "name": "Blueberry Cake",
+    "price": 2.6,
+    "image": "images/cake-with-blueberries.webp"
+  },
+  {
+    "id": 4,
+    "name": "Chocolate Cheescake",
+    "price": 45.0,
+    "image": "images/cake1.webp"
+  },
+  {
+    "id": 5,
+    "name": "Strawberry Crunch Cake",
+    "price": 55.0,
+    "image": "images/cake7.webp"
+  },
+
+  {
+    "id": 6,
+    "name": " Cookie & Cream Cake",
+    "price": 53.0,
+    "image": "images/cake2.webp"
+  },
+
+  {
+    "id": 7,
+    "name": "Yeast Cake with Fruit",
+    "price": 3.2,
+    "image": "images/yeast-cake-with-fruit.webp"
+  },
+
+  {
+    "id": 8,
+    "name": "Lime Cupcakes",
+    "price": 2.7,
+    "image": "images/lemone-cake.webp"
+  },
+
+  {
+    "id": 9,
+    "name": "Mini Fruit Tarts",
+    "price": 2.4,
+    "image": "images/fruit-tarts.webp"
+  },
+
+  {
+    "id": 10,
+    "name": "Pistacio Lava Cake",
+    "price": 3.2,
+    "image": "images/pistacio.webp"
+  },
+
+  {
+    "id": 11,
+    "name": "Lemon Cake",
+    "price": 2.7,
+    "image": "images/dessert4.webp"
+  },
+
+  {
+    "id": 12,
+    "name": "Healthy Cheescake",
+    "price": 3.0,
+    "image": "images/dessert.webp"
+  }
+]
