@@ -473,9 +473,129 @@ body.showCart .cartTab {
   text-align: center;
 }
 
+/* Contact SECTION*/
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.row {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.contact h1 {
+  font-size: 2.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.contact h3 {
+  font-size: 2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.text,
+.text1 {
+  font-size: 1.2rem;
+  color: #777;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: center;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+.image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-color: #fff;
+}
+
+.box {
+  margin-bottom: 15px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.box:focus {
+  border-color: #e84393;
+  outline: none;
+}
+
+.btn {
+  background-color: #e84393;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #d63384;
+}
+
 /* Za manje ekrane*/
 @media (max-width: 768px) {
   .benefit-card {
     flex: 1 1 100%;
+  }
+
+  /* contact section */
+
+  .contact h1 {
+    font-size: 2.2rem;
+  }
+
+  .contact h3 {
+    font-size: 1.8rem;
+  }
+
+  .text,
+  .text1 {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .box {
+    padding: 10px;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 10px;
   }
 }
