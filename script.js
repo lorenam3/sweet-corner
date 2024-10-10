@@ -77,6 +77,8 @@ const addCartToMemory = () => {
 const addCartToHTML = () => {
   listCartHTML.innerHTML = "";
   let totalQuantity = 0;
+  let totalPriceAllProducts = 0;
+
   if (cart.length > 0) {
     cart.forEach((item) => {
       totalQuantity = totalQuantity + item.quantity;
@@ -88,6 +90,9 @@ const addCartToHTML = () => {
         (value) => value.id == item.product_id
       );
       let info = products1[positionProduct];
+
+      totalPriceAllProducts += info.price * item.quantity;
+
       listCartHTML.appendChild(newItem);
       newItem.innerHTML = `
             <div class="image">
@@ -96,7 +101,9 @@ const addCartToHTML = () => {
                 <div class="name">
                 ${info.name}
                 </div>
-                <div class="totalPrice">$${info.price * item.quantity}</div>
+                <div class="totalPrice">$${(info.price * item.quantity).toFixed(
+                  2
+                )}</div>
                 <div class="quantity">
                     <span class="minus"><</span>
                     <span>${item.quantity}</span>
@@ -105,7 +112,18 @@ const addCartToHTML = () => {
             `;
     });
   }
+
   iconCartSpan.innerText = totalQuantity;
+
+  let totalPriceContainer = document.querySelector(".totalPriceContainer");
+  if (!totalPriceContainer) {
+    totalPriceContainer = document.createElement("div");
+    totalPriceContainer.classList.add("totalPriceContainer");
+    listCartHTML.appendChild(totalPriceContainer);
+  }
+  totalPriceContainer.innerHTML = `
+  <h3>Total Price= $${totalPriceAllProducts.toFixed(2)}</h3>
+  `;
 };
 
 listCartHTML.addEventListener("click", (event) => {
