@@ -568,6 +568,17 @@ form {
   background-color: #d63384;
 }
 
+.note {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: #555;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: rgba(232, 67, 147, 0.1);
+  border-left: 4px solid #e84393;
+  border-radius: 5px;
+}
+
 /* FOOTER section*/
 .footer-section {
   color: #777;

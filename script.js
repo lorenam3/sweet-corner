@@ -180,3 +180,13 @@ const initApp = () => {
     });
 };
 initApp();
+
+const form = document.querySelector("form");
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  alert("Thank you for your inquiry! We will respond as soon as possible.");
+
+  form.reset();
+});
