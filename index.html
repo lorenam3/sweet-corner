@@ -157,13 +157,40 @@
             </div>
     </div>
 
+    <div class="checkoutModal" id="checkoutModal">
+        <h2>Checkout</h2>
+        <p class="checkout-notice">
+          Dear sweet lovers, <br>
+          Please take note of the following when placing your order:
+        </p>
+          <ul>
+              <li>Fill out the form with all the necessary details to ensure we provide the best service.</li>
+              <li>Select the date when you wish to enjoy our delicious treats.</li>
+              <li>Payment will be made upon delivery, making the process simple and convenient.</li>
+              <li>If you have any special requests or ideas, feel free to share them in the message box.</li>
+          </ul>
+          <p>Thank you for your trust, and we look forward to serving you!
+          </p>
+      
+        <form id="checkoutForm">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" title="Please enter your email address. (e.g., name@example.com)" required>
+            <input type="tel" placeholder="Phone" required pattern="[0-9]*" title="Please enter a valid phone number." required>
+            <input type="text" placeholder="Address" required>
+            <input type="date" placeholder="Select Date" required>
+            <textarea placeholder="Your message" required></textarea>
+            <input type="submit" placeholder="Place Order">
+        </form>
+        <button class="closeCheckout" onclick="closeCheckout()">Cancel</button>
+
+    </div>
+
     <section class="contact">
         <h1>Contact Us</h1>
         <h3>Order Now</h3>
         
         <p class="text">
             Indulge in our delightful cakes, pastries, and desserts at Sweet Corner.
-
         </p>
         
         <p class="text1">

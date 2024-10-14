@@ -74,10 +74,17 @@ const addToCart = (product_id) => {
 const addCartToMemory = () => {
   localStorage.setItem("cart", JSON.stringify(cart));
 };
+
 const addCartToHTML = () => {
   listCartHTML.innerHTML = "";
   let totalQuantity = 0;
   let totalPriceAllProducts = 0;
+
+  if (cart.length === 0) {
+    listCartHTML.innerHTML = `<p class ="empty-cart-message">Your cart is empty.</p>`;
+    iconCartSpan.innerText = totalQuantity;
+    return;
+  }
 
   if (cart.length > 0) {
     cart.forEach((item) => {
@@ -122,7 +129,9 @@ const addCartToHTML = () => {
     listCartHTML.appendChild(totalPriceContainer);
   }
   totalPriceContainer.innerHTML = `
-  <h3>Total Price= $${totalPriceAllProducts.toFixed(2)}</h3>
+  <h3>Total Price = $${totalPriceAllProducts.toLocaleString(undefined, {
+    minimumFractionDigits: 2,
+  })} </h3>
   `;
 };
 
@@ -181,12 +190,53 @@ const initApp = () => {
 };
 initApp();
 
+function openCheckout() {
+  const modal = document.getElementById("checkoutModal");
+  modal.style.display = "block";
+  setTimeout(() => modal.classList.add("show"), 10);
+}
+
+function closeCheckout() {
+  const modal = document.getElementById("checkoutModal");
+  modal.classList.remove("show");
+  setTimeout(() => (modal.style.display = "none"), 500);
+}
+
+document.querySelector(".checkOut").addEventListener("click", () => {
+  if (cart.length === 0) {
+    alert("Your cart is empty, please add some products before checking out.");
+    return;
+  }
+  openCheckout();
+});
+
+//
+const dateInput = document.querySelector(`input[type="date"]`);
+
+function setMinDate() {
+  const tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  const day = String(tomorrow.getDate()).padStart(2, "0");
+  const month = String(tomorrow.getMonth() + 1).padStart(2, "0");
+  const year = tomorrow.getFullYear();
+  dateInput.setAttribute("min", `${year}-${month}-${day}`);
+}
+
+window.onload = setMinDate;
+
+//
 const form = document.querySelector("form");
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
 
-  alert("Thank you for your inquiry! We will respond as soon as possible.");
+  const confirmationMessage = document.createElement("p");
+  confirmationMessage.textContent =
+    "Thank you for your inquiry! We will respond as soon as possible.";
+  confirmationMessage.style.color = "e84393";
+  form.parentElement.appendChild(confirmationMessage);
+
+  setTimeout(() => confirmationMessage.remove(), 5000);
 
   form.reset();
 });
