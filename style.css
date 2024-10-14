@@ -227,12 +227,12 @@ svg {
   max-width: 50%;
 }
 
-.about-text h3 {
+.title-h {
   font-size: 2.8rem;
   color: #333;
 }
 
-.about-text h3:hover {
+.title-h:hover {
   color: var(--pink);
 }
 
@@ -768,14 +768,84 @@ form {
 
 /* Za manje ekrane*/
 @media (max-width: 768px) {
-  .benefit-card {
-    flex: 1 1 100%;
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header .navbar a {
+    font-size: 1.2rem;
+    padding: 0 1rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  .main {
+    height: 70vh;
+    background-size: cover;
+  }
+
+  .swiper-pagination-bullet {
+    visibility: visible;
+  }
+
+  .image-text h2 {
+    font-size: 33px;
+  }
+
+  .image-text h3 {
+    font-size: 28px;
+  }
+
+  .about-us .row {
+    flex-direction: column;
+  }
+
+  .about-us .video-container,
+  .about-us .row .about-text {
+    max-width: 100%;
+  }
+
+  .about-us .row .video-container {
+    flex: none;
+    max-width: 100%;
+  }
+
+  .benefits-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .products-container {
+    width: 100%;
+    padding: 0 5%;
+  }
+
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .products .item {
+    max-width: 100%;
+  }
+
+  .checkoutModal {
+    width: 60%;
+    height: auto;
   }
 
   /* contact section */
+  .contact {
+    flex-direction: column;
+    align-items: center;
+  }
 
   .contact h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
 
   .contact h3 {
@@ -788,7 +858,15 @@ form {
     padding: 0 10px;
   }
 
+  .image img {
+    width: 100%;
+  }
+
   .box {
+    padding: 10px;
+  }
+
+  #contactForm {
     padding: 10px;
   }
 
