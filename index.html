@@ -12,15 +12,19 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-        
+    <header>      
+      <div class="hamburger" onclick="showSidebar()">&#9776;</div>
+      <div class="close-menu" onclick="hideSidebar()" style="display: none;">&#10005;</div>
+  
       <a href="#" class="logo">sweet corner</a>
 
+  
+
       <nav class="navbar">
-        <a href="#home">Home</a>
-        <a href="">About</a>
-        <a href="">Products</a>
-        <a href="">Contact</a>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#daily-list">Products</a>
+          <a href="#contact-info">Contact</a>
       </nav>
 
       <div class="icon-cart">
@@ -39,9 +43,12 @@
           />
         </svg>
         <span>0</span>
+        </div>
+
+      
     </header>
 
-    <section class="main swiper mySwiper">
+    <section class="main swiper mySwiper" id="home">
       <div class="slider-wrapper swiper-wrapper">
         <div class="slider-item swiper-slide">
           <img
@@ -81,7 +88,7 @@
       <div class="swiper-pagination"></div>
     </section>
 
-    <section class="about-us">
+    <section class="about-us" id="about">
       <div class="row">
         <div class="about-text">
           <h3 class="title-h">Made Just for You</h3>
@@ -132,7 +139,7 @@
     </section>
 
 
-    <section class="daily-specials-list">
+    <section class="daily-specials-list" id="daily-list">
             <h1 class="title-h">Today's Sweet Special</h1>
         
               <div class="products-container">
@@ -153,7 +160,7 @@
       
             <div class="btn">
               <button class="close">CLOSE</button>
-              <button class="checkOut">CHECK Out</button>
+              <button class="checkOut">CHECKOUT</button>
             </div>
     </div>
 
@@ -163,11 +170,11 @@
           Dear sweet lovers, <br>
           Please take note of the following when placing your order:
         </p>
-          <ul>
-              <li>Fill out the form with all the necessary details to ensure we provide the best service.</li>
-              <li>Select the date when you wish to enjoy our delicious treats.</li>
-              <li>Payment will be made upon delivery, making the process simple and convenient.</li>
-              <li>If you have any special requests or ideas, feel free to share them in the message box.</li>
+          <ul class="ul-checkOut">
+              <li class="li-checkOut">Fill out the form with all the necessary details to ensure we provide the best service.</li>
+              <li class="li-checkOut">Select the date when you wish to enjoy our delicious treats.</li>
+              <li class="li-checkOut">Payment will be made upon delivery, making the process simple and convenient.</li>
+              <li class="li-checkOut">If you have any special requests or ideas, feel free to share them in the message box.</li>
           </ul>
           <p>Thank you for your trust, and we look forward to serving you!
           </p>
@@ -185,8 +192,8 @@
 
     </div>
 
-    <section class="contact">
-        <h1>Contact Us</h1>
+    <section class="contact" id="contact-info">
+        <h1 class="title-h">Contact Us</h1>
         <h3>Order Now</h3>
         
         <p class="text">

@@ -1,3 +1,23 @@
+function showSidebar() {
+  const navbar = document.querySelector(".navbar");
+  const hamburger = document.querySelector(".hamburger");
+  const closeMenu = document.querySelector(".close-menu");
+
+  navbar.classList.add("show");
+  hamburger.style.display = "none";
+  closeMenu.style.display = "block";
+}
+
+function hideSidebar() {
+  const navbar = document.querySelector(".navbar");
+  const hamburger = document.querySelector(".hamburger");
+  const closeMenu = document.querySelector(".close-menu");
+
+  navbar.classList.remove("show");
+  hamburger.style.display = "block";
+  closeMenu.style.display = "none";
+}
+
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   loop: true,
